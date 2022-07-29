@@ -1,0 +1,205 @@
+/* importing font style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-size: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: rgb(230,231,235);
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    position: relative;
+    max-width: 900px;
+    width:100%;
+    perspective: 2700px;
+    margin-left: 19%;
+    margin-top: 20%;
+}
+
+.image{
+    display: inline-block;
+    vertical-align: top;
+    width:100%;
+    height:100%;
+    position: fixed;
+    margin-left:-6.3%;
+    height: auto;
+    max-width: 100%;
+}
+
+img{
+    height:820px;
+    width: 1010px;
+    object-fit:cover;
+    margin-right: -100px;
+}
+
+.signup-box{
+    display: inline-block;
+    width:700px;
+    background-color: white;
+    height: 820px;
+    margin: auto;
+    margin-left: 970px;
+    vertical-align: top;
+}
+
+h1{
+    text-align: center;
+    padding-top:35px;
+    color: rgb(61, 67, 59);
+    margin-top: 60px;
+}
+
+h5{
+    text-align: center;
+    color: rgb(145,151,167);
+}
+
+form{
+    width:400px;
+    margin-left: 3px;
+    margin-top: 0%;
+    padding-left: 28%;
+    padding-right: 50%;
+}
+
+
+form input{
+    width: 370px;
+    padding: 20px;
+    border-width: 0 0 2px;
+    border-color: rgb(200,204,210);
+    outline: 0;
+    margin-left: -15px;
+}
+form input:focus{
+    border-color: black;
+}
+
+form ::placeholder{
+    color: rgb(145,151,167);
+    font-size: 18px;
+}
+
+input[type = "button"]{
+    width: 300px;
+    height: 35px;
+    margin-top: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+input[type = "button"]:hover{
+    background-color: rgb(61,67,81);
+}
+
+.google{
+    width: 300px;
+    height: 35px;
+    margin-top: 20px;
+    border: 1px solid gray;;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: -20px;
+}
+
+.google:hover{
+    background-color: rgb(61,67,81);
+    color: white;
+}
+
+.link{
+    margin-top: 30px;
+}
+
+/* style for log in page*/
+.container{
+    text-align: center;
+    position: relative;
+    max-width: 1200px;
+    width:100%;
+    perspective: 2700px;
+    margin-left: 5%;
+    margin-top: 7%;
+}
+
+.head{
+    text-align: center;
+    padding-top:35px;
+    color: rgb(61, 67, 59);
+    margin-top: 90px;
+}
+
+.login-box{
+    display: inline-block;
+    width:500px;
+    background-color: white;
+    height: 820px;
+    margin: auto;
+    margin-left: 1080px;
+    vertical-align: top;
+}
+
+.log-form{
+    width:300px;
+    margin-left: 3px;
+    margin-top: 10%;
+    padding-left: 10%;
+}
+
+.log-form input{
+    width: 370px;
+    padding: 20px;
+    border-width: 0 0 2px;
+    border-color: rgb(200,204,210);
+    outline: 0;
+    margin-left: -15px;
+}
+.log-form input:focus{
+    border-color: black;
+}
+
+.log-form ::placeholder{
+    color: rgb(145,151,167);
+    font-size: 18px;
+}
+
+.login{
+    width: 300px;
+    height: 35px;
+    margin-top: 80px;
+    border: none;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-top: 12px;
+    padding-bottom: 30px;
+    margin-left: 40px;
+}
+
+.login a{
+    color: white;
+}
+
+.login:hover{
+    background-color: rgb(61,67,81);
+}

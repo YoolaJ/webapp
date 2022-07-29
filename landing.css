@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Poppins';
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: gray;
+}
+
+label.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+
+nav li a:hover{
+    color:black;
+    font-weight: bold;
+}
+
+nav a{
+    font-size: 20px;
+    color: white;
+    margin: 0 16px;
+    text-decoration: none;
+    justify-content: space-between;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+/* style of the icons in the navigation bar */
+nav .icon div {
+    font-size: 24px;
+    color: black;
+    display: inline-block;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+/* style of the icons when hovered */
+.icon div:hover {
+    color: white;
+}
+
+footer.copyright{
+    font-family: "Poppins";
+    margin-top: 100%;
+    position: relative;
+    text-align: center;
+}
+
+/* style of the home page image */
+.home {
+    padding-top: 224px;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.411), rgba(0, 0, 0, 0.432)), url(/images/HomePage.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+
+/* style of the homepage's text on the image */
+.home span {
+    color: var(--teal);
+    font-size: 40px;
+    font-weight: bolder;
+    margin-left: 8%;
+    margin-top: 10%;
+    position: absolute;
+}
+
+/* style of the heading in the home page */
+.home h3 {
+    color: var(--teal);
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 8%;
+    margin-top: 15%;
+    position: absolute;
+}
+
+/* style of the link in the home page */
+.home a {
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 8%;
+    margin-top: 20%;
+    position: absolute;
+}
+
+
+/* section for the featured product */
+/* style of the banner box */
+.banner {
+    padding: 60px 10%;
+    background: var(--teal);
+}
+
+/* style of the heading in the banner box */
+.banner h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+/* style of the banner box' background */
+.banner .banner-content {
+    padding: 10px ;
+    margin-top: 5%;
+    background-image: linear-gradient(#00000017, #2023277e);
+    height: 50vh;
+    background-size: cover;
+}
+
+/* style of the banner box's text */
+.banner .banner-content div {
+    font-weight: bolder;
+    font-size: 18px;
+    padding-top: 45px;
+    position: relative;
+    color: white;
+    padding-left: 150px;
+    /* float: left; */
+
+} 
+.banner .banner-content .content {
+    float:left;
+}
+
+.banner .banner-content .box img {
+    width: 200px;
+    height: 200px;
+}
+
+/* style of the footer */
+.footer {
+    background: var(--light);
+    padding: 34px 9%;
+}
+
+/* style of the container of the footer section */
+.footer .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(525px, 225px))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(500px, 20px));
+}
+
+/* style of the heading in the footer */
+.footer .container .box h3 {
+    font-size: 35px;
+    color: black;
+    padding: 10px;
+}
+
+/* style of the texts in the footer */
+.footer .container .box p {
+    font-size: 24px;
+    color: var(--light);
+    padding-bottom: 5px;
+}
+
+/* style of the link in the footer */
+.footer .container .box a {
+    font-size: 20px;
+    color: var(--dark);
+    padding: 10px 0;
+    display: block;
+}
+
+/* style of the link in the footer when hovered */
+.footer .container .box a:hover {
+    font-size: 20px;
+    color: var(--blue);
+    padding: 10px 0;
+    display: block;
+}
+
+/* style of the icon in the footer */
+.footer .container .box i {
+    padding-right: 5px;
+}
+
+/* style of the copyright section */
+.copyright {
+    text-align: center;
+    background: var(--orange);
+    color: black;
+    font-size: 24px;
+}
+
+.heading {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/slider2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 300px;
+    padding-bottom: 125px;
+    text-align: center;
+}

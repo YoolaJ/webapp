@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- head section of the page -->
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> EMS - Salaries </title>
+
+        <!-- font awesome link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- css link -->
+        <link rel="stylesheet" href="salary.css">
+    </head>
+
+    <!-- body section of the page -->
+
+    <body>
+       <nav>
+            <a href="home.html"><img class="logo" src="logo4.png" alt="" style="max-height: 90px;  max-width: 250px;"></a>
+            
+            <ul>
+                <li>
+                    <a href="login.html">
+                        <div id=logout onclick="LogOut()"><i class="fas fa-sign-in-alt"></i> </div>
+                    </a>
+                </li>    
+            </ul>
+       </nav>
+
+       <div class="side-menu">
+           <div class="menu">
+            <a href="home.html"><i class="fas fa-home"></i> Home </a>
+            <a href="employee.html"><i class="fas fa-users"></i> Employees </a>
+            <a class="active" href="salary.html"><i class="fas fa-money-bill-alt"></i> Salary </a>
+            <a href="asset.html"><i class="fas fa-landmark"></i> Assets </a>
+            <a href="#"><i class="fas fa-cog"></i> Settings </a>
+            <a href="account.html"><div id="settings"><i class="fas fa-user-cog"></i> Account Settings</div></a>
+
+            <a href="login.html"><div id=logout onclick="LogOut()"><i class="fas fa-sign-in-alt"></i> Logout</div></a>
+        
+           </div>
+        </div>
+
+        <section class="main">
+            <label class="title">
+                Salary
+            </label>
+
+            <button id="addSal" class="addEmp" onclick="addEmp()">
+                + Add Salary
+            </button>
+        </section>
+
+        <section class="e-table">
+            <table class="content-table">
+                <!-- defining table header -->
+                <thead>
+                    <tr>
+                        <td> ID </td>
+                        <td>FIRST NAME</td>
+                        <td>LAST NAME</td>
+                        <td>AMOUNT</td>
+                        <td>PAYMENT STATUS</td>
+                        <td>ACTION</td>
+                    </tr>
+                </thead>
+
+                <!-- table's body -->
+                <tbody id="customer_table">
+                    <tr>
+                        <td> S01 </td>
+                        <td><h5> Solo </h5></td>
+                        <td><h5> Ayo </h5></td>
+                        <td><h5> GHS 1000.00</h5></td>
+                        <td><h5> Paid </h5></td>
+                        <td><button id="edit" class="Edbutton" onclick="edit_Button()"> Edit </button> <button class="Delbutton"> Delete </button></td>
+                    </tr>
+
+                    <tr>
+                        <td> S02 </td>
+                        <td><h5> Josh </h5></td>
+                        <td><h5> Ibi </h5></td>
+                        <td><h5> GHS 1000.00</h5></td>
+                        <td><h5> Paid </h5></td>
+                        <td><button class="Edbutton" onclick="edit_Button()"> Edit </button> <button class="Delbutton"> Delete </button></td>
+                    </tr>
+
+                    <tr>
+                        <td> S03 </td>
+                        <td><h5> Dee </h5></td>
+                        <td><h5> Mayor </h5></td>
+                        <td><h5> GHS 5000.00</h5></td>
+                        <td><h5> Unpaid </h5></td>
+                        <td><button class="Edbutton" onclick="edit_Button()"> Edit </button> <button class="Delbutton"> Delete </button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        
+        <div class="bg-modal">
+            <div class="modal-content">
+                <form action="" id="add_ass" >
+                    <!-- content of the form -->
+                    <div class="content">
+                        <h1 style='text-align:center'>Add Salary</h1>
+    
+                        <h4>First name: </h4>
+                        <input type="text" placeholder="e.g. Solo" name="firstname" id="firstName" required><br></br>
+    
+                        <h4>Last name: </h4>
+                        <input type="text" placeholder="e.g. Ay" name="lastname" id="lastName" required><br></br>
+    
+                        <h4>Amount: </h4>
+                        <input type="text" placeholder="e.g. GHS 1000.00" name="amt" id="amt" required><br></br>
+
+                        <h4>Payment Status: </h4>
+                        <input type="text" placeholder="e.g. Paid" name="paymentst" id="paymentst" required><br></br>
+    
+                        <!-- add button -->
+                        <button type='submit' name='add' id='add' class="Add-Btn">Add</button>
+    
+                        <!-- back button -->
+                        <button id='back' class="back" onclick="closePop()">Back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="edit-modal">
+            <div class="content">
+                <form id="edit-ass">
+                    <!-- content of the form -->
+                    <div class="content">
+                        <h1 style='text-align:center'>Edit Salary</h1>
+    
+                        <h4>First name: </h4>
+                        <input type="text" placeholder="e.g. Solo" name="firstname" id="firstName" required><br></br>
+    
+                        <h4>Last name: </h4>
+                        <input type="text" placeholder="e.g. Ay" name="lastname" id="lastName" required><br></br>
+    
+                        <h4>Amount: </h4>
+                        <input type="text" placeholder="e.g. GHS 1000.00" name="amt" id="amt" required><br></br>
+
+                        <h4>Payment Status: </h4>
+                        <input type="text" placeholder="e.g. Paid" name="paymentst" id="paymentst" required><br></br>
+    
+                        <!-- add button -->
+                        <button type='submit' name='add' id='add' class="Add-Btn">Add</button>
+    
+                        <!-- back button -->
+                        <button id='back' class="back" onclick="closePop()">Back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      
+    </body>
+
+    <script>
+        document.getElementById('addSal').addEventListener('click',
+        function(){
+            document.querySelector('.bg-modal').style.display = 'flex';
+        });
+
+        document.querySelector('.back').addEventListener('click',
+        function(){
+            document.querySelector('.bg-modal').style.display='none';
+        });
+
+        document.getElementById('edit').addEventListener('click',
+        function(){
+            document.querySelector('.edit-modal').style.display = 'flex';
+        });
+
+        function closePop(){
+            document.querySelector('.edit-modal').style.display = 'none';
+        };
+
+// function edit_Button(){
+//             document.querySelector('.edit-modal').style.display = 'flex';
+//         }
+    
+// // 
+// document.querySelector('.back').addEventListener('click',
+//         function(){
+//             document.querySelector('.edit-modal').style.display='none';
+//         }); 
+        
+
+    </script>
+
+    </body>
+
+</html>

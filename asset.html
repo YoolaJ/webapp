@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- head section of the page -->
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> EMS - Assets </title>
+
+        <!-- font awesome link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- css link -->
+        <link rel="stylesheet" href="asset.css">
+    </head>
+
+    <!-- body section of the page -->
+
+    <body>
+       <nav>
+            <a href="home.html"><img class="logo" src="logo4.png" alt="" style="max-height: 90px; max-width: 250px;"></a>
+            
+            <label></label>
+
+            <ul>
+                <li>
+                    <a href="login.html">
+                        <div id=logout onclick="LogOut()"><i class="fas fa-sign-in-alt"></i> </div>
+                    </a>
+                </li>    
+            </ul>
+       </nav>
+
+       <div class="side-menu">
+           <div class="menu">
+            <a href="home.html"><i class="fas fa-home"></i> Home </a>
+            <a href="employee.html"><i class="fas fa-users"></i> Employees </a>
+            <a href="salary.html"><i class="fas fa-money-bill-alt"></i> Salary </a>
+            <a class="active" href="asset.html"><i class="fas fa-landmark"></i> Assets </a>
+            <a href="#"><i class="fas fa-cog"></i> Settings </a>
+            <a href="account.html"><div id="settings"><i class="fas fa-user-cog"></i> Account Settings</div></a>
+
+            <a href="login.html"><div id=logout onclick="LogOut()"><i class="fas fa-sign-in-alt"></i> Logout</div></a>
+        
+           </div>
+        </div>
+
+        <section class="main">
+            <label class="title">
+                Assets
+            </label>
+
+            <button class="addEmp"id="add-asset" onclick="">
+                + Add Asset
+            </button>
+        </section>
+
+        <section class="e-table">
+            <table class="content-table">
+                <!-- defining table header -->
+                <thead>
+                    <tr>
+                        <td> ID </td>
+                        <td>FIRST NAME</td>
+                        <td>LAST NAME</td>
+                        <td>ASSET NAME</td>
+                        <td>COST</td>
+                        <td>ACTION</td>
+                    </tr>
+                </thead>
+
+                <!-- table's body -->
+                <tbody id="customer_table">
+                    <tr>
+                        <td> A01 </td>
+                        <td><h5> Josh </h5></td>
+                        <td><h5> Ibi </h5></td>
+                        <td><h5> House </h5></td>
+                        <td><h5> GHS 5,000.00 </h5></td>
+                        <td><button id="edit" class="Edbutton" onclick="edit_Button()"> Edit </button> <button class="Delbutton"> Delete </button></td>
+                    </tr>
+
+                    <tr>
+                        <td> A02 </td>
+                        <td><h5> Solo </h5></td>
+                        <td><h5> Ayo </h5></td>
+                        <td><h5> Car </h5></td>
+                        <td><h5> GHS 25,000.00 </h5></td>
+                        <td><button id="edit" class="Edbutton" onclick="edit_Button()"> Edit </button> <button class="Delbutton"> Delete </button></td>    
+                    </tr>
+                    <tr>
+                        <td> A03 </td>
+                        <td><h5> Dee </h5></td>
+                        <td><h5> Mayor </h5></td>
+                        <td><h5> Motor </h5></td>
+                        <td><h5> GHS 2,000.00 </h5></td>
+                        <td><button id="edit" class="Edbutton" onclick="edit_Button()"> Edit </button> <button class="Delbutton"> Delete </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="bg-modal">
+            <div class="modal-content">
+                <form action="" id="add_ass" >
+                    <!-- content of the form -->
+                    <div class="content">
+                        <h1 style='text-align:center'>Add Asset</h1>
+    
+                        <h4>First name: </h4>
+                        <input type="text" placeholder="e.g. Solo" name="firstname" id="firstName" required><br></br>
+    
+                        <h4>Last name: </h4>
+                        <input type="text" placeholder="e.g. Ay" name="lastname" id="lastName" required><br></br>
+    
+                        <h4>Asset Name: </h4>
+                        <input type="text" placeholder="e.g.car " name="assName" id="assName" required><br></br>
+    
+                        <h4>Cost: </h4>
+                        <input type="text" placeholder="e.g. GHS 1000.00" name="cost" id="cost" required><br></br>
+    
+                        <!-- add button -->
+                        <button type='submit' name='add' id='add' class="Add-Btn">Add</button>
+    
+                        <!-- back button -->
+                        <button id='back' class="back" onclick="closePop()">Back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="edit-modal">
+            <div class="content">
+                <form id="edit-ass">
+                    <!-- content of the form -->
+                    <div class="content">
+                        <h1 style='text-align:center'>Edit Asset</h1>
+    
+                        <h4>First name: </h4>
+                        <input type="text" placeholder="e.g. Solo" name="firstname" id="firstName" required><br></br>
+    
+                        <h4>Last name: </h4>
+                        <input type="text" placeholder="e.g. Ay" name="lastname" id="lastName" required><br></br>
+    
+                        <h4>Asset Name: </h4>
+                        <input type="text" placeholder="e.g.car " name="assName" id="assName" required><br></br>
+    
+                        <h4>Cost: </h4>
+                        <input type="text" placeholder="e.g. GHS 1000.00" name="cost" id="cost" required><br></br>
+    
+                        <!-- add button -->
+                        <button type='submit' name='add' id='add' class="Add-Btn">Add</button>
+    
+                        <!-- back button -->
+                        <button id='back' class="back" onclick="closePop()">Back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        document.getElementById('add-asset').addEventListener('click',
+        function(){
+            document.querySelector('.bg-modal').style.display = 'flex';
+        });
+
+        document.querySelector('.back').addEventListener('click',
+        function(){
+            document.querySelector('.bg-modal').style.display='none';
+        });
+
+        function edit_Button(){
+            document.querySelector('.edit-modal').style.display = 'flex';
+        }
+    
+        function closePop(){
+            document.querySelector('.edit-modal').style.display = 'none';
+        };
+    </script>
+
+</html>
